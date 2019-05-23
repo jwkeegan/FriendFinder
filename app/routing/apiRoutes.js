@@ -1,5 +1,6 @@
 // Include path package in the route dependencies
 var path = require("path");
+var friendsData = require("../data/friends");
 
 // Export these routing options
 module.exports = function(app) {
@@ -8,6 +9,6 @@ module.exports = function(app) {
     });
 
     app.post("/api/friends", function(req, res) {
-
+        friendsData.push(req.body);
     });
 }
