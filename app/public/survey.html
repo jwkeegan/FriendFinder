@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Friend Finder</title>
@@ -8,9 +9,385 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-    Hello
+  <div class="container">
+    <h2>Survey Questions</h2>
+    <hr>
+    <h3>
+      <strong>About You:</strong>
+    </h3>
+    <h4>Name (required)</h4>
+    <input type="text" id="name" class="form-control" required>
+    <h4>Image link (required)</h4>
+    <input type="text" id="image" class="form-control" required>
+    <hr>
+    <h3>Question 1:</h3>
+    <h4>You are always thinking of new ideas or plans.</h4>
+    <select id="q1" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q1-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 2:</h3>
+    <h4>In general, you rely on past experiences over intuition.</h4>
+    <select id="q2" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q2-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 3:</h3>
+    <h4>You find it easy to stay relax even when there is pressure.</h4>
+    <select id="q3" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q3-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 4:</h3>
+    <h4>You rarely do something out of pure curiosity.</h4>
+    <select id="q4" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q4-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 5:</h3>
+    <h4>Other people rarely upset you.</h4>
+    <select id="q5" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q5-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 6:</h3>
+    <h4>You find it difficult to relate to others' feelings.</h4>
+    <select id="q6" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q6-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 7:</h3>
+    <h4>You value telling the truth over considering peoples' sensitivites.</h4>
+    <select id="q7" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q7-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 8:</h3>
+    <h4>You can easily get carried away by your fantasies or day-dreams.</h4>
+    <select id="q8" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q8-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 9:</h3>
+    <h4>You believe that everyone's views should be respected regardless of facts.</h4>
+    <select id="q9" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title id="q9-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <h3>Question 10:</h3>
+    <h4>You are energized by being around other people.</h4>
+    <select id="q10" class="chosen-select">
+      <option value="1">1 (Strongly Disagree)</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <!-- <div class="chosen-container chosen-container-single chosen-with-drop chosen-container-active" title
+      id="q10-chosen">
+      <a class="chosen-single chosen-default">
+        <span>Select an Option</span>
+      </a>
+      <div class="chosen-drop">
+        <div class="chosen-search">
+          <input type="text" autocomplete="off">
+        </div>
+        <ul class="chosen-results">
+          <li class="active-result" data-option-array-index="1">1 (Strongly Disagree)</li>
+          <li class="active-result" data-option-array-index="2">2</li>
+          <li class="active-result" data-option-array-index="3">3</li>
+          <li class="active-result" data-option-array-index="4">4</li>
+          <li class="active-result" data-option-array-index="5">5 (Strongly Agree)</li>
+        </ul>
+      </div>
+    </div> -->
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+      <i class="fa fa-check-circle"></i>
+      Submit
+    </button>
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">Friends API</a>
+          |
+          <a href="https://www.github.com/jwkeegan/FriendFinder" target="_blank">Github Repo</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+  <!-- Modal -->
+  <div id="results-modal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">
+            Best Match:
+          </h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img src="" alt id="match-image">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Nothing Found."
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+
+      var validEntry = true;
+      $(".chosen-select").each(function () {
+        if ($(this).val() === "") {
+          validEntry = false;
+        }
+      });
+      $(".form-control").each(function () {
+        if ($(this).val() === "") {
+          validEntry = false;
+        }
+      });
+
+      if (validEntry) {
+        var newUser = {
+          name: $("#name").val(),
+          photo: $("#image").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
+
+        $.post("/api/friends", newUser, function (data) {
+          $("#match-name").text(data.name);
+          $("#match-image").attr("src", data.photo);
+          $("#results-modal").modal("toggle");
+        });
+
+      } else {
+        alert("Please fill in entire form!");
+      }
+
+    });
+
+  </script>
 </body>

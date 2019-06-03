@@ -9,6 +9,23 @@ module.exports = function(app) {
     });
 
     app.post("/api/friends", function(req, res) {
+        var scores = req.body.scores;
+        var bestMatch;
+        var lowestScore = 100;
+
+        for (var i = 0; i < friendsData.length; i++) {
+            var curTotal = 0;
+            for (var j = 0; j < scores.length; j++) {
+                curTotal += Math.abs(scores[j] - friendsData[i].scores[j]);
+            }
+            if (curTotal < lowestScore) {
+                bestMatch = friendsData[i];
+            }
+        }
+
         friendsData.push(req.body);
+
+        res.send(bestMatch);
+
     });
 }
